@@ -19,12 +19,22 @@ mesh = Mesh.from_json(FILE)
 tri = mesh.copy()
 mesh_quads_to_triangles(tri)
 
+
+def interrupt():
+    value = input("Press enter to continue, Press 1 to abort ")
+    print("")
+    if isinstance(value, str):
+        if value == '1':
+            raise ValueError("Aborted")
+
 # ==============================================================================
 # Isolines
 # ==============================================================================
 
 M = tri.to_vertices_and_faces()
 S = tri.vertices_attribute('z')
+
+interrupt()
 
 vertices, edges = igl.trimesh_isolines(M, S, 50)
 
