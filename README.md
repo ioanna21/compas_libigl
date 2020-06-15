@@ -30,9 +30,11 @@ pip install -e git+https://github.com/compas-dev/compas_viewers.git#egg=compas_v
 
 *On Windows.*
 
+Get the PyOpenGL wheel for your setup from here <https://www.lfd.uci.edu/~gohlke/pythonlibs/#pyopengl>.
+
 ```bash
 conda install PySide2 --yes
-pip install wheels/PyOpenGL-3.1.5-cp37-cp37m-win_amd64.whl
+pip install PyOpenGL-3.1.5-cp37-cp37m-win_amd64.whl
 pip install git+https://github.com/compas-dev/compas_viewers.git#egg=compas_viewers
 ```
 
